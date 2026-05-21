@@ -1,7 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+import ChatDemo from "@/components/ChatDemo";
 import LeadForm from "@/components/LeadForm";
 import SchoolsCTA from "@/components/SchoolsCTA";
 import ScrollReveal from "@/components/ScrollReveal";
+import StatsCounter from "@/components/StatsCounter";
 
 export default function Page() {
   return (
@@ -14,8 +16,8 @@ export default function Page() {
           <a href="#" className="logo">Mentoria</a>
           <div className="nav-links">
             <a href="#how">How it works</a>
+            <a href="#demo">Live demo</a>
             <a href="#worlds">The village</a>
-            <a href="#parents">For parents</a>
             <a href="#pricing">Pricing</a>
             <a href="#hero-form" className="nav-cta">Start free week</a>
           </div>
@@ -229,6 +231,20 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ============= LIVE CHAT DEMO ============= */}
+      <section className="section" id="demo">
+        <div className="wrap">
+          <div className="section-head">
+            <div className="section-eye">try a level · live</div>
+            <h2>Watch a session <em>unfold.</em></h2>
+            <p className="section-sub">
+              No card. No download. Press play and follow Alex through one quiet conversation with Sage — or step through it at your own pace.
+            </p>
+          </div>
+          <ChatDemo />
+        </div>
+      </section>
+
       {/* ============= THE SIX WORLDS ============= */}
       <section className="section" id="worlds">
         <div className="wrap">
@@ -428,12 +444,7 @@ export default function Page() {
             <p className="section-sub">Not engagement minutes. Not streaks. The ones that suggest something is landing.</p>
           </div>
 
-          <div className="stats">
-            <div className="stat"><div className="n">87%</div><div className="l">of parents say their child mentioned a quest at the dinner table</div></div>
-            <div className="stat"><div className="n">2.3×</div><div className="l">more real-world action attempts than week one by week six</div></div>
-            <div className="stat"><div className="n">14m</div><div className="l">median session length — by design, not by accident</div></div>
-            <div className="stat"><div className="n">0</div><div className="l">leaderboards, streaks, push-to-return notifications</div></div>
-          </div>
+          <StatsCounter />
         </div>
       </section>
 
