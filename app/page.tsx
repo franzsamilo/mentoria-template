@@ -500,6 +500,7 @@ export default function Page() {
               <div className="price-name">Try it</div>
               <div className="price-tag">No card. No "remind me later" emails.</div>
               <div className="price-amt">$0<span className="sm">/ first 7 days</span></div>
+              <div className="price-alt">₱0 PHP / first 7 days</div>
               <div className="price-per">then chooses a plan, or doesn't</div>
               <ul>
                 <li>All six worlds, unlimited</li>
@@ -515,6 +516,7 @@ export default function Page() {
               <div className="price-name">Together</div>
               <div className="price-tag">For one curious child + you.</div>
               <div className="price-amt">$12<span className="sm">/ month</span></div>
+              <div className="price-alt">₱699 PHP / month</div>
               <div className="price-per">cancel anytime · no annual lock-in</div>
               <ul>
                 <li>Everything in Try it</li>
@@ -531,6 +533,7 @@ export default function Page() {
               <div className="price-name">Up to 3 kids</div>
               <div className="price-tag">Each kid, their own mentor, their own village.</div>
               <div className="price-amt">$22<span className="sm">/ month</span></div>
+              <div className="price-alt">₱1,299 PHP / month</div>
               <div className="price-per">three children, one tidy invoice</div>
               <ul>
                 <li>Everything in Together</li>

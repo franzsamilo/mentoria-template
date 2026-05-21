@@ -2,11 +2,20 @@
 
 import { useEffect } from "react";
 
+/**
+ * Adds the `.reveal` class to scroll-targets when they enter the viewport.
+ * Elements are visible by default, so this only adds a one-shot fade-up —
+ * if JS is disabled or the observer fails the content still renders.
+ */
 export default function ScrollReveal() {
   useEffect(() => {
+    if (typeof IntersectionObserver === "undefined") return;
+
     const targets = document.querySelectorAll<HTMLElement>(
       ".idea, .w-card, .testi, .price, .scene"
     );
+    if (targets.length === 0) return;
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, i) => {
@@ -21,12 +30,7 @@ export default function ScrollReveal() {
     );
 
     targets.forEach((el) => {
-      if (el.classList.contains("reveal")) return;
-      el.style.opacity = "0";
-      el.style.transform = "translateY(24px)";
-      el.style.animation = "rise 700ms cubic-bezier(0.2,0.8,0.2,1) forwards";
-      el.style.animationPlayState = "paused";
-      io.observe(el);
+      if (!el.classList.contains("reveal")) io.observe(el);
     });
 
     return () => io.disconnect();
