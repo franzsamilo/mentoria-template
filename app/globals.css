@@ -624,7 +624,6 @@ h1.display em::after {
 .w-card:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 0 var(--ink); }
 .w-card.feature { grid-column: span 6; }
 .w-card.compact { grid-column: span 3; }
-.w-card.wide { grid-column: span 8; display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: start; }
 
 .w-tag {
   display: inline-block;
@@ -1416,9 +1415,7 @@ footer { background: var(--ink); color: var(--bg); padding: 72px 0 36px; }
   .ideas { grid-template-columns: 1fr; }
   .worlds .w-card,
   .worlds .w-card.feature,
-  .worlds .w-card.compact,
-  .worlds .w-card.wide { grid-column: span 12; }
-  .worlds .w-card.wide { grid-template-columns: 1fr; }
+  .worlds .w-card.compact { grid-column: span 12; }
   .mentor-row { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .m-card:nth-child(n) { transform: none; }
   .sunday-grid, .schools { grid-template-columns: 1fr; }

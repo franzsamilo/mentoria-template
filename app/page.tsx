@@ -239,6 +239,7 @@ export default function Page() {
           </div>
 
           <div className="worlds">
+            {/* Row 1: Plaza feature (6) + Grove compact (3) + Gym compact (3) = 12 */}
             <div className="w-card feature reveal">
               <span className="w-tag" style={{ background: "#FEF3C7" }}>PLAZA · 12 LEVELS</span>
               <div className="w-blob" style={{ background: "#F59E0B" }}>
@@ -263,48 +264,6 @@ export default function Page() {
               <p>The Earth as a friend. Small, daily ways to care.</p>
             </div>
 
-            <div className="w-card reveal">
-              <span className="w-tag" style={{ background: "#DBEAFE" }}>PAVILION · 8 LV</span>
-              <div className="w-blob" style={{ background: "#2563EB" }}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <circle cx="12" cy="7" r="4" />
-                  <path d="M5 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" />
-                </svg>
-              </div>
-              <h3>Volunteering Pavilion</h3>
-              <p>How to help without being asked. How to ask if you can help. How it feels when somebody says yes.</p>
-              <div className="quote">first lesson is free →</div>
-            </div>
-
-            <div className="w-card wide reveal">
-              <div>
-                <span className="w-tag" style={{ background: "#FEF9C3" }}>MARKET · 9 LV</span>
-                <div className="w-blob" style={{ background: "#CA8A04" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                    <path d="M3 7l3-3h12l3 3v3a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0V7z" />
-                    <path d="M4 10v10h16V10" />
-                    <path d="M10 20v-6h4v6" />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h3>Entrepreneurship Market</h3>
-                <p>Make a thing. Trade it. Learn what people actually want. Not "be a CEO" — more like "be a tiny shopkeeper for an afternoon and see what you notice." Real money never enters; real customer empathy does.</p>
-                <div className="quote">"I learned people don't want what I think they want." — Lina, 11</div>
-              </div>
-            </div>
-
-            <div className="w-card reveal">
-              <span className="w-tag" style={{ background: "#F3E8FF" }}>HUB · 11 LV</span>
-              <div className="w-blob" style={{ background: "#9333EA" }}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                </svg>
-              </div>
-              <h3>Interpersonal Hub</h3>
-              <p>Talk to anyone. Listen on purpose. Disagree without breaking the bridge. The hardest world. The most asked-for.</p>
-            </div>
-
             <div className="w-card compact reveal">
               <span className="w-tag" style={{ background: "#FEE2E2" }}>GYM · 12 LV</span>
               <div className="w-blob" style={{ background: "#DC2626" }}>
@@ -314,6 +273,45 @@ export default function Page() {
               </div>
               <h3>Gym</h3>
               <p>Bodies. Limits. Trying again.</p>
+            </div>
+
+            {/* Row 2: Pavilion (3) + Hub (3) + Market feature (6) = 12 */}
+            <div className="w-card compact reveal">
+              <span className="w-tag" style={{ background: "#DBEAFE" }}>PAVILION · 8 LV</span>
+              <div className="w-blob" style={{ background: "#2563EB" }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <circle cx="12" cy="7" r="4" />
+                  <path d="M5 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2" />
+                </svg>
+              </div>
+              <h3>Volunteering Pavilion</h3>
+              <p>How to help without being asked. How to ask if you can help.</p>
+              <div className="quote">first lesson is free →</div>
+            </div>
+
+            <div className="w-card compact reveal">
+              <span className="w-tag" style={{ background: "#F3E8FF" }}>HUB · 11 LV</span>
+              <div className="w-blob" style={{ background: "#9333EA" }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+              </div>
+              <h3>Interpersonal Hub</h3>
+              <p>Talk to anyone. Listen on purpose. Disagree without breaking the bridge.</p>
+            </div>
+
+            <div className="w-card feature reveal">
+              <span className="w-tag" style={{ background: "#FEF9C3" }}>MARKET · 9 LV</span>
+              <div className="w-blob" style={{ background: "#CA8A04" }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                  <path d="M3 7l3-3h12l3 3v3a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0V7z" />
+                  <path d="M4 10v10h16V10" />
+                  <path d="M10 20v-6h4v6" />
+                </svg>
+              </div>
+              <h3>Entrepreneurship Market</h3>
+              <p>Make a thing. Trade it. Learn what people actually want. Not "be a CEO" — more like "be a tiny shopkeeper for an afternoon and see what you notice." Real money never enters; real customer empathy does.</p>
+              <div className="quote">"I learned people don't want what I think they want." — Lina, 11</div>
             </div>
           </div>
         </div>
