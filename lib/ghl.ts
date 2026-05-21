@@ -56,10 +56,11 @@ const FIELD_ENV_KEYS: Record<string, string> = {
 };
 
 function buildCustomFields(payload: LeadPayload): GhlCustomField[] {
+  const indexable = payload as unknown as Record<string, string | undefined>;
   const out: GhlCustomField[] = [];
   for (const [payloadKey, envKey] of Object.entries(FIELD_ENV_KEYS)) {
     const fieldId = process.env[envKey];
-    const value = (payload as Record<string, string | undefined>)[payloadKey];
+    const value = indexable[payloadKey];
     if (fieldId && value) {
       out.push({ id: fieldId, field_value: value });
     }

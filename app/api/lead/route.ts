@@ -46,12 +46,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "invalid_touchpoint" }, { status: 400 });
   }
 
-  const payload: LeadPayload = { email, touchpoint };
+  const extras: Record<string, string> = {};
   for (const key of STRING_KEYS) {
     if (key === "email") continue;
     const v = pickString(raw, key);
-    if (v) (payload as Record<string, string>)[key] = v;
+    if (v) extras[key] = v;
   }
+  const payload: LeadPayload = { email, touchpoint, ...extras };
 
   const result = await submitToGhl(payload);
   if (!result.ok) {
